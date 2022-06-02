@@ -1,7 +1,9 @@
 class OrdersController < ApplicationController
 
   def show
-    @order = Order.find(params[:id])
+    @order = Order.find(params[:id])#get current order row
+    @orders_id = @order.line_items.pluck(:id)
+    @line_items = Product.find(@orders_id) #get products matching orders_id
   end
 
   def create

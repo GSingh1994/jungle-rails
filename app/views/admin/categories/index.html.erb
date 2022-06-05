@@ -1,11 +1,13 @@
-<h1>Categories</h1>
-<ul>
-<% @categories.each do |category| %>
-  <li><%= category.name%></li>
-<% end %>
-</ul>
-
-  <div class="well">
-    <%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
+<div class="card border-success mx-auto mt-5 mb-3" style="max-width: 18rem;">
+  <div class="card-header text-center font-weight-bold bg-transparent border-success">Categories</div>
+  <div class="card-body text-success">
+    
+    <% @categories.each do |category| %>
+      <div><%= category.name%></div>
+    <% end %>
+    
   </div>
-
+  <div class="card-footer border-success">
+    <%= link_to '+ New Category', [:new, :admin, :category], class: 'text-white bg-success btn btn-info w-100 h-100' %>
+  </div>
+</div>

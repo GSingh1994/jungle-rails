@@ -1,3 +1,19 @@
-<h1>Admin-Dashboard</h1>
-<h3>Products in database: <%= @total_quantity%></h3>
-<h3>Total categories: <%= @total_categories%></h3>
+<div class="card border-success card mt-5 mx-auto" style="width: 50rem;">
+    <div class="card-header text-center border-success">
+      Admin-Dashboard
+    </div>
+    <table class="table">
+      <tbody>
+        <tr>
+          <th scope="row"></th>
+          <td>Total Products:</td>
+          <td><%= @total_quantity%></td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td>Total categories:</td>
+          <td><%= @total_categories%></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
